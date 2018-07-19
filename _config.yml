@@ -9,8 +9,8 @@ avatarDesc: Neuroscience/EEG-BCI
 url: "http://zhenggaoxing2018.top/"
 
 # Comment
-comment:
-    disqus: GaoxingZheng
+# comment:
+#    disqus: GaoxingZheng
     # uyan:   # 有言id,登录有言官网申请
 
 # Social
@@ -22,14 +22,14 @@ social:
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
-baidu:
-    id:   
+# baidu:
+#    id:   
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
-ga:
-    id:    
-    host: auto  
+# ga:
+#    id:    
+#    host: auto  
 
 
 # 《----------------- 上面的信息修改成你自己的 ---------------------------》
