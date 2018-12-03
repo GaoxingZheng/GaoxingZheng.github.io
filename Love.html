@@ -33,31 +33,27 @@
             <div id="wrap">
                <div id="text">
                     <div id="code">                 
-                    <span class="say">我的爱人，我会牵着你的手，走到满头白发的那一天，</span><br>
-                    <span class="say">我会守护你生命里的精彩，并陪伴你一路精彩下去。</span><br>
-                    <span class="say">你的幸福快乐，是我一生的追求。</span><br>
-                    <span class="say">我会每一天带着笑脸，和你说早安，</span><br>
-                     <span class="say">我会每一晚与你道声晚安再入梦乡，</span><br>
-                    <span class="say">我会带你去所有你想去的地方，</span><br>
-                    <span class="say">陪你闹看你笑</span><br>
-                    <span class="say">历经你生命中所有的点点滴滴。</span><br>
-                    <span class="say">我期待这一生与你一起走过，</span><br>
-                    <span class="say">我期待与你慢慢变老</span><br>
-                    <span class="say">等我们老到哪儿也去不了，</span><br>
-                    <span class="say">还能满载着一生的幸福快乐 ！</span><br>
+                    <span class="say">你怎么这么傻乎乎的。</span><br>
+                    <span class="say">你这么这么愚蠢。</span><br>
+                    <span class="say">这真是智者千虑，必有一失啊！</span><br>
+                    <span class="say">我们实验室是花钱请个助理，不是花钱养个宝宝。</span><br>
+                     <span class="say">做人要学会感恩，我们做科研是拿着国家的钱，我们怀有一颗感恩的心。</span><br>
+                    <span class="say">你做事怎么糊涂啊</span><br>
+                    <span class="say">看你们写的论文，我看的饭都吃不下去了</span><br>
+                    <span class="say">我希望你们都能学到东西，不要给FD丢脸。</span><br>
+                    <span class="say">我虽然有时候骂你们比较狠，但是希望你们不要放在心里，只论事不论人。</span><br>
+                    <span class="say">我儿子早产，早产十天。</span><br>
+                    <span class="say">JYQ你盛装打扮是准备参加晚上的组会吗？</span><br>
+                    <span class="say"></span><br>
                     <br>
-                    <span class="say">我会为我们的未来撑起一片天空，</span><br>
-                     <span class="say">为我们的将来担负起一生的责任，</span><br>
-                      <span class="say">愿意为你去做每一件能让你开心快乐的事。</span><br>
-                       <span class="say">所有我们经历的点点滴滴，</span><br>
-                        <span class="say">都是我们一辈子最美的回忆。</span><br>
-                         <span class="say">我愿意爱你直到老去！</span><br>
+                    <span class="say">好学生和坏学生的差距难道就真的这么大吗？</span><br>
+                     <span class="say">FX你怎么傻乎乎的</span><br>
                    <br>
-                    <span class="say"><span class="space"></span> -- Yours, GroundTruth,2018.</span>
+                    <span class="say"><span class="space"></span> -- Yours, wuxia2001.</span>
                     </div>
                 </div>
                 <div id="clock-box">
-                    <a href="http://zhenggaoxing2018.top/" target="_blank">GroundTruth</a> 与 <a href="http://neucomp.fudan.edu.cn/" target="_blank">YuguoLab</a> 在一起的
+                    <a href="http://zhenggaoxing2018.top/" target="_blank">GroundTruth</a> 与 <a href="http://zhenggaoxing2018.top/" target="_blank">YuguoLab</a> 在一起的
                         <div id="clock"></div>
                 </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
@@ -67,22 +63,22 @@
     
     <script>
     </script>
- 
+
     <script>
     (function(){
         var canvas = $('#canvas');
- 
+
         if (!canvas[0].getContext) {
             $("#error").show();
             return false;
         }
- 
+
         var width = canvas.width();
         var height = canvas.height();
         
         canvas.attr("width", width);
         canvas.attr("height", height);
- 
+
         var opts = {
             seed: {
                 x: width / 2 - 20,
@@ -118,12 +114,12 @@
                 speed: 10,
             }
         }
- 
+
         var tree = new Tree(canvas[0], width, height, opts);
         var seed = tree.seed;
         var foot = tree.footer;
         var hold = 1;
- 
+
         canvas.click(function(e) {
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
@@ -140,7 +136,7 @@
             y = e.pageY - offset.top;
             canvas.toggleClass('hand', seed.hover(x, y));
         });
- 
+
         var seedAnimate = eval(Jscex.compile("async", function () {
             seed.draw();
             while (hold) {
@@ -156,21 +152,21 @@
                 $await(Jscex.Async.sleep(10));
             }
         }));
- 
+
         var growAnimate = eval(Jscex.compile("async", function () {
             do {
                 tree.grow();
                 $await(Jscex.Async.sleep(10));
             } while (tree.canGrow());
         }));
- 
+
         var flowAnimate = eval(Jscex.compile("async", function () {
             do {
                 tree.flower(2);
                 $await(Jscex.Async.sleep(10));
             } while (tree.canFlower());
         }));
- 
+
         var moveAnimate = eval(Jscex.compile("async", function () {
             tree.snapshot("p1", 240, 0, 610, 680);
             while (tree.move("p1", 500, 0)) {
@@ -179,14 +175,14 @@
             }
             foot.draw();
             tree.snapshot("p2", 500, 0, 610, 680);
- 
+
             // 会有闪烁不得意这样做, (＞﹏＜)
             canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
             canvas.css("background", "#ffe");
             $await(Jscex.Async.sleep(300));
             canvas.css("background", "none");
         }));
- 
+
         var jumpAnimate = eval(Jscex.compile("async", function () {
             var ctx = tree.ctx;
             while (true) {
@@ -196,7 +192,7 @@
                 $await(Jscex.Async.sleep(25));
             }
         }));
- 
+
         var textAnimate = eval(Jscex.compile("async", function () {
             var together = new Date();
             together.setFullYear(2016, 2, 29);
@@ -204,7 +200,7 @@
             together.setMinutes(00);
             together.setSeconds(0);
             together.setMilliseconds(0);
- 
+
             $("#code").show().typewriter();
             $("#clock-box").fadeIn(500);
             while (true) {
@@ -212,22 +208,19 @@
                 $await(Jscex.Async.sleep(1000));
             }
         }));
- 
+
         var runAsync = eval(Jscex.compile("async", function () {
             $await(seedAnimate());
             $await(growAnimate());
             $await(flowAnimate());
             $await(moveAnimate());
- 
+
             textAnimate().start();
- 
+
             $await(jumpAnimate());
         }));
- 
+
         runAsync().start();
     })();
     </script>
- 
- 
-<div style="left: 1500px; position: absolute; top: 220px;color:blue;font-size:20px;">Ground Truth更改设计</div>
 </body></html>
